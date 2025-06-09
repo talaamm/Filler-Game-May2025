@@ -1,4 +1,46 @@
-mac:
+$ ./linux_game_engine -h
+bash: ./linux_game_engine: cannot execute binary file: Exec 
+format error
+
+means that the binary linux_game_engine is not compatible with 
+your current system architecture. Most likely, you are on Windows 
+(or WSL), and the binary is compiled for Linux x86_64 or ARM (M1).
+
+
+How to Fix
+1. Run in Docker (Recommended)
+The provided binaries are for Linux. Run everything inside the Docker container as described in your README.md:
+
+docker build -t filler .
+docker run -v "$(pwd)/solution":/filler/solution -it filler
+
+Then, inside the container, run:
+
+./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/terminator
+
+2. If You Want to Run Natively on Windows
+You would need a Windows-compatible version of the game engine, which is not provided.
+You cannot run Linux binaries directly on Windows (unless using WSL, and even then, only if the binary matches your WSL architecture).
+
+3. If You Use WSL (Windows Subsystem for Linux)
+Make sure you are in a WSL terminal.
+The binary must be for Linux x86_64 (not ARM).
+If you still get this error in WSL, the binary may be for a different architecture (e.g., ARM vs x86_64).
+
+
+
+docker build -t filler .
+docker run -v "$(pwd)/solution":/filler/solution -it filler
+# Inside the container, run:
+chmod +x /filler/linux_robots/* /filler/m1_robots/* /filler/linux_game_engine /filler/m1_game_engine
+./m1_game_engine -f maps/map01 -p1 m1_robots/bender -p2 m1_robots/terminator
+
+
+
+root@312d45f6d4b9:/filler# file ./m1_game_engine
+./m1_game_engine: ELF 64-bit LSB executable, *unknown arch 0xffffbfef* (SYSV), no program header, missing section headers at 125467397854331328
+
+
 
 cd docker_image
 docker build --platform linux/amd64 -t filler .
@@ -7,19 +49,58 @@ docker run --platform linux/amd64 -v "$(pwd)/solution":/filler/solution -it fill
 
 
 
+
+rustup target add x86_64-unknown-linux-gnu
+cargo build --release --target x86_64-unknown-linux-gnu
+
+solution/target/x86_64-unknown-linux-gnu/release/solution
+
+COPY ./solution/target/x86_64-unknown-linux-gnu/release/solution /linux_robots/filler
+RUN chmod +x /linux_robots/filler
+
+docker build --platform linux/amd64 -t filler .
+docker run --platform linux/amd64 -v "$(pwd)/solution":/filler/solution -it filler
+
+cargo install cross
+cross build --release --target x86_64-unknown-linux-gnu
+
+rustup target add x86_64-unknown-linux-gnu
+cross build --release --target x86_64-unknown-linux-gnu
+cross build --release --target x86_64-unknown-linux-gnu --force-non-host
+
+
+FOR WINDOWS MAKE THEM UNIX by
+
+to install dos2unix: 
+apt-get update && apt-get install -y dos2unix
+
+dos2unix maps/map00
+dos2unix maps/map01
+dos2unix maps/map02
+
+
+
+ON WINDOWS:
+
+
+cd docker_image
+docker build --platform linux/amd64 -t filler .
+docker run --platform linux/amd64 -v "/c/Users/lenovo/Desktop/filler-2/docker_image/solution:/filler/solution" -it filler
+
+./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/terminator > /filler/solution/game_log.txt 2>&1
+
+
 POWERSHELL::
 
 
 cd docker_image
 docker build --platform linux/amd64 -t filler .
-docker run --platform linux/amd64 -v "C:\Users\lenovo\Desktop\filler-2\docker_image\solution:/filler/solution" -it filler // (USE UR PWD)
+docker run --platform linux/amd64 -v "C:\Users\lenovo\Desktop\filler-2\docker_image\solution:/filler/solution" -it filler
 apt-get update && apt-get install -y dos2unix
 dos2unix maps/map00
 dos2unix maps/map01
 dos2unix maps/map02
-./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/filler 
-
-
-TO PRINT OUTPUT IN A FILE:
 ./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/filler > /filler/solution/1_ben_fi.txt 2>&1
+
+
 cp /filler/debug_output.txt /filler/solution/0_ben_fil.txt
