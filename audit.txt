@@ -1,0 +1,227 @@
+ ./linux_game_engine -f maps/map00 -p2 linux_robots/wall_e -
+p1 linux_robots/filler
+
+seed: 1748106398860571247
+Player1 (                     linux_robots/filler): 170
+Player2 (                     linux_robots/wall_e): 109
+Player1 won!
+
+seed: 1748106418368446123
+Player1 (                     linux_robots/filler): 199
+Player2 (                     linux_robots/wall_e): 87
+Player1 won!
+
+seed: 1748106428123113285
+Player1 (                     linux_robots/filler): 175
+Player2 (                     linux_robots/wall_e): 83
+Player1 won!
+
+seed: 1748106441164755218
+Player1 (                     linux_robots/filler): 253
+Player2 (                     linux_robots/wall_e): 40
+Player1 won!
+
+seed: 1748106453502161836
+Player1 (                     linux_robots/filler): 213
+Player2 (                     linux_robots/wall_e): 70
+Player1 won!
+
+
+
+
+
+
+
+
+
+
+
+ ./linux_game_engine -f maps/map01 -p2 linux_robots/h2_d2 -p1 linux_robots/filler
+
+ seed: 1748106506283837033
+Player1 (                     linux_robots/filler): 805
+Player2 (                      linux_robots/h2_d2): 273
+Player1 won!
+
+seed: 1748106516245218611
+Player1 (                     linux_robots/filler): 912
+Player2 (                      linux_robots/h2_d2): 196
+Player1 won!
+
+seed: 1748106526367987324
+Player1 (                     linux_robots/filler): 857
+Player2 (                      linux_robots/h2_d2): 200
+Player1 won!
+
+seed: 1748107007923054600
+Player1 (                     linux_robots/filler): 856
+Player2 (                      linux_robots/h2_d2): 228
+Player1 won!
+
+seed: 1748107028343805753
+Player1 (                     linux_robots/filler): 615
+Player2 (                      linux_robots/h2_d2): 440
+Player1 won!
+
+
+
+
+
+
+
+
+
+
+
+
+ ./linux_game_engine -f maps/map02 -p2 linux_robots/bender -p1 linux_robots/filler
+
+ seed: 1748107134301270333
+Player1 (                     linux_robots/filler): 8357
+Player2 (                     linux_robots/bender): 784
+Player1 won!
+
+seed: 1748107265866574136
+Player1 (                     linux_robots/filler): 6055
+Player2 (                     linux_robots/bender): 2364
+Player1 won!
+
+seed: 1748107385213444184
+Player1 (                     linux_robots/filler): 7960
+Player2 (                     linux_robots/bender): 930
+Player1 won!
+
+seed: 1748107473863193336
+Player1 (                     linux_robots/filler): 6365
+Player2 (                     linux_robots/bender): 2162
+Player1 won!
+
+
+
+
+
+
+
+
+./linux_game_engine -f maps/map00 -p2 linux_robots/terminator -p1 linux_robots/filler
+
+
+seed: 1748107617919103100
+Player1 (                     linux_robots/filler): 142
+Player2 (                 linux_robots/terminator): 132
+Player1 won!
+
+
+
+
+
+
+
+
+./linux_game_engine -f maps/map00 -p1 linux_robots/terminator -p2 linux_robots/filler
+
+seed: 1748107684190781735
+Player1 (                 linux_robots/terminator): 198
+Player2 (                     linux_robots/filler): 101
+Player1 won!
+
+seed: 1748107703812544767
+Player1 (                 linux_robots/terminator): 120
+Player2 (                     linux_robots/filler): 135
+Player2 won!
+
+
+
+
+
+
+
+
+
+
+
+./linux_game_engine -f maps/map01 -p1 linux_robots/terminator -p2 linux_robots/filler
+
+seed: 1748107723424497973
+Player1 (                 linux_robots/terminator): 676
+Player2 (                     linux_robots/filler): 350
+Player1 won!
+
+
+seed: 1748032606229996006
+Player1 (                     linux_robots/filler): 754
+Player2 (                 linux_robots/terminator): 299
+Player1 won!
+
+
+
+
+
+
+
+
+
+
+./linux_game_engine -f maps/map00 -p1 linux_robots/wall_e -p2 linux_robots/filler
+
+seed: 1748108059092862951
+Player1 (                     linux_robots/wall_e): 78
+Player2 (                     linux_robots/filler): 193
+Player2 won!
+
+seed: 1748108089070237501
+Player1 (                     linux_robots/wall_e): 62
+Player2 (                     linux_robots/filler): 229
+Player2 won!
+
+seed: 1748108131110594033
+Player1 (                     linux_robots/wall_e): 103
+Player2 (                     linux_robots/filler): 182
+Player2 won!
+
+
+
+
+
+
+
+
+
+./linux_game_engine -f maps/map01 -p1 linux_robots/h2_d2 -p2 linux_robots/filler
+
+seed: 1748108168025559361
+Player1 (                      linux_robots/h2_d2): 216
+Player2 (                     linux_robots/filler): 841
+Player2 won!
+
+seed: 1748108221897996640
+Player1 (                      linux_robots/h2_d2): 419
+Player2 (                     linux_robots/filler): 638
+Player2 won!
+
+seed: 1748108238304597441
+Player1 (                      linux_robots/h2_d2): 322
+Player2 (                     linux_robots/filler): 765
+Player2 won!
+
+
+
+
+
+
+
+
+
+
+
+./linux_game_engine -f maps/map02 -p1 linux_robots/bender -p2 linux_robots/filler
+
+seed: 1748108281855866452
+Player1 (                     linux_robots/bender): 2148
+Player2 (                     linux_robots/filler): 6395
+Player2 won!
+
+seed: 1748108409780550037
+Player1 (                     linux_robots/bender): 1745
+Player2 (                     linux_robots/filler): 6513
+Player2 won!

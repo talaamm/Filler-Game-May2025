@@ -1,0 +1,25 @@
+mac:
+
+cd docker_image
+docker build --platform linux/amd64 -t filler .
+docker run --platform linux/amd64 -v "$(pwd)/solution":/filler/solution -it filler
+./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/terminator > /filler/solution/game_log.txt 2>&1
+
+
+
+POWERSHELL::
+
+
+cd docker_image
+docker build --platform linux/amd64 -t filler .
+docker run --platform linux/amd64 -v "C:\Users\lenovo\Desktop\filler-2\docker_image\solution:/filler/solution" -it filler // (USE UR PWD)
+apt-get update && apt-get install -y dos2unix
+dos2unix maps/map00
+dos2unix maps/map01
+dos2unix maps/map02
+./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/filler 
+
+
+TO PRINT OUTPUT IN A FILE:
+./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/filler > /filler/solution/1_ben_fi.txt 2>&1
+cp /filler/debug_output.txt /filler/solution/0_ben_fil.txt
