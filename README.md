@@ -135,15 +135,6 @@ The test suite covers:
 - Opponent cell identification
 - Edge cases and boundary conditions
 
-## 📊 Performance Results
-
-Based on the audit results, the current AI implementation shows strong performance:
-
-- **vs Wall-E**: Consistently wins (170-253 vs 40-109 points)
-- **vs H2-D2**: Dominates (615-912 vs 196-440 points)
-- **vs Bender**: Strong performance (6055-8357 vs 784-2364 points)
-- **vs Terminator**: Competitive (101-754 vs 120-676 points)
-
 ## 🎯 Game Strategy
 
 ### Current Strategy
@@ -154,36 +145,6 @@ The AI implements a "territory expansion" strategy:
 2. Prioritize moves that bring the AI closer to opponent territory
 3. Maintain connectivity of territory
 4. Adapt to different map sizes and piece shapes
-
-### Potential Improvements
-
-- Implement more sophisticated pathfinding
-- Add piece shape analysis for better placement
-- Consider territory connectivity optimization
-- Add opponent move prediction
-
-## 🔧 Development
-
-### Local Development
-
-1. Edit `docker_image/solution/src/main.rs`
-2. Rebuild the Docker image
-3. Test against different opponents
-4. Run unit tests in `solution_test/`
-
-### Adding New Features
-
-- Modify the main game loop in `main.rs`
-- Add new strategic functions
-- Update the test suite in `solution_test/`
-- Validate against all opponent types
-
-## 🏆 Bonus Challenges
-
-1. **Graphic Visualizer**: Create a real-time game visualization
-2. **Terminator Beater**: Develop an AI that consistently defeats the Terminator robot
-3. **Multi-Strategy AI**: Implement adaptive strategies based on opponent behavior
-4. **Performance Optimization**: Improve execution speed and memory usage
 
 ## 📝 Game Protocol
 
@@ -216,9 +177,5 @@ Respond with coordinates in format: `X Y\n`
 - Return `0 0\n` when no valid moves are available
 - Handle timeouts gracefully
 - Validate all input data
-
-## 📄 License
-
-This project is part of an educational curriculum. Please refer to your institution's guidelines for usage and distribution.
 
 ---
