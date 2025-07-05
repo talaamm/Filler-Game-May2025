@@ -24,7 +24,7 @@ Filler is an algorithmic game where two robots compete on a grid called the "Anf
 
 ## 📁 Project Structure
 
-```
+```text
 Filler-Game-May2025/
 ├── docker_image/          # Docker container and game engine
 │   ├── Dockerfile         # Container configuration
@@ -191,7 +191,7 @@ The AI implements a "territory expansion" strategy:
 
 The game engine sends data in this format:
 
-```
+```text
 $$$ exec p1 : [robot_path]
 Anfield 20 15:
     01234567890123456789
