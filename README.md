@@ -40,7 +40,7 @@ Filler-Game-May2025/
 │   │   ├── terminator     # Advanced AI (challenge)
 │   │   └── wall_e         # Basic AI
 │   ├── m1_robots/         # M1 Mac compatible robots
-│   └── solution/          # Your AI implementation
+│   └── solution/          # My AI implementation
 │       ├── Cargo.toml     # Rust project configuration
 │       ├── src/
 │       │   └── main.rs    # Main AI logic
@@ -49,7 +49,7 @@ Filler-Game-May2025/
 │   ├── Cargo.toml
 │   └── src/
 │       └── lib.rs         # Test implementations
-└── audit.txt              # Performance test results
+└── audit.txt             
 ```
 
 ## 🚀 Quick Start
@@ -84,10 +84,10 @@ Filler-Game-May2025/
 Inside the container, you can run games with different configurations:
 
 ```bash
-# Basic game: Your AI vs Wall-E
+# Basic game: My AI vs Wall-E
 ./linux_game_engine -f maps/map01 -p1 linux_robots/bender -p2 linux_robots/filler
 
-# Challenge game: Your AI vs Terminator
+# Challenge game: My AI vs Terminator
 ./linux_game_engine -f maps/map01 -p1 linux_robots/terminator -p2 linux_robots/filler
 
 # Save game output to file
@@ -99,10 +99,6 @@ Inside the container, you can run games with different configurations:
 - `-f, -file string`: Path to map file
 - `-p1, -player1 string`: Path to first AI
 - `-p2, -player2 string`: Path to second AI
-- `-q, -quiet`: Quiet mode
-- `-r, -refresh`: Throttling mode
-- `-s, -seed int`: Use specific random seed
-- `-t, -time int`: Set timeout in seconds (default 10)
 
 ## 🤖 AI Implementation
 
@@ -177,5 +173,3 @@ Respond with coordinates in format: `X Y\n`
 - Return `0 0\n` when no valid moves are available
 - Handle timeouts gracefully
 - Validate all input data
-
----
