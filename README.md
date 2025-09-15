@@ -4,6 +4,8 @@ A strategic algorithmic game where two robots compete to fill a grid with pieces
 
 Try out to play the game! [Game Demo](https://cosmic-grid-filler.lovable.app/)
 
+> Note: The game demo was developed by AI [lovable](https://lovable.dev/) in order to understand the game logic
+
 ## 🎮 Game Overview
 
 Filler is an algorithmic game where two robots compete on a grid called the "Anfield". Players take turns placing randomly generated pieces on the grid, with the goal of occupying the largest surface area. The game ends when neither player can place any more pieces.
